@@ -6,3 +6,7 @@ module.exports = {
     },
     plugins: [],
   }
+  const value = event.innerText
+    if(selectedSeat.includes(value)){
+      return alert('Aready Booked')
+    }
