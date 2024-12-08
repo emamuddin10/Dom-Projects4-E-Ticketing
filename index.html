@@ -26,6 +26,12 @@
     />
   </head>
   <body>
+    
+    <div class="flex  px-3 ">
+      <img src="./images/seat-green.png" alt="">
+      <p class="text-green-500"> <span id="available-seat">40</span> Total Seats Left </p>
+    </div>
+
     <!-- seat booking section -->
     <section
       class="px-8 py-5 bg-white rounded-xl shadow-sm w-11/12 mx-auto grid grid-cols-3 gap-10"
@@ -61,13 +67,57 @@
           <div
             class="col-span-11 grid grid-cols-10 gap-16 items-center text-center"
           >
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A1</button>
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A2</button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">A1</button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">A2</button>
             <button class="col-span-2"></button>
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A3</button>
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A4</button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">A3</button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">A4</button>
           </div>
-          <!-- row-1  -->
+          <!-- row-2  -->
+          <p class="col-span-1">B</p>
+          <div
+            class="col-span-11 grid grid-cols-10 gap-16 items-center text-center"
+          >
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">B1</button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">B2</button>
+            <button class="col-span-2"></button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">B3</button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">B4</button>
+          </div>
+          <!-- row-3  -->
+          <p class="col-span-1">C</p>
+          <div
+            class="col-span-11 grid grid-cols-10 gap-16 items-center text-center"
+          >
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">C1</button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">C2</button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2"></button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">C3</button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">C4</button>
+          </div>
+          <!-- row-4  -->
+          <p class="col-span-1">D</p>
+          <div
+            class="col-span-11 grid grid-cols-10 gap-16 items-center text-center"
+          >
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">D1</button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">D2</button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2"></button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">D3</button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">D4</button>
+          </div>
+          <!-- row-5  -->
+          <p class="col-span-1">E</p>
+          <div
+            class="col-span-11 grid grid-cols-10 gap-16 items-center text-center"
+          >
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">E1</button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">E2</button>
+            <button class="col-span-2"></button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">E3</button>
+            <button onclick="handleSelectSeat(this)" class="col-span-2 btn btn-md hover:bg-slate-500">E4</button>
+          </div>
+          <!-- row-6  -->
           <p class="col-span-1">A</p>
           <div
             class="col-span-11 grid grid-cols-10 gap-16 items-center text-center"
@@ -78,7 +128,7 @@
             <button class="col-span-2 btn btn-md hover:bg-slate-500">A3</button>
             <button class="col-span-2 btn btn-md hover:bg-slate-500">A4</button>
           </div>
-          <!-- row-1  -->
+          <!-- row-7  -->
           <p class="col-span-1">A</p>
           <div
             class="col-span-11 grid grid-cols-10 gap-16 items-center text-center"
@@ -89,7 +139,7 @@
             <button class="col-span-2 btn btn-md hover:bg-slate-500">A3</button>
             <button class="col-span-2 btn btn-md hover:bg-slate-500">A4</button>
           </div>
-          <!-- row-1  -->
+          <!-- row-8  -->
           <p class="col-span-1">A</p>
           <div
             class="col-span-11 grid grid-cols-10 gap-16 items-center text-center"
@@ -100,51 +150,7 @@
             <button class="col-span-2 btn btn-md hover:bg-slate-500">A3</button>
             <button class="col-span-2 btn btn-md hover:bg-slate-500">A4</button>
           </div>
-          <!-- row-1  -->
-          <p class="col-span-1">A</p>
-          <div
-            class="col-span-11 grid grid-cols-10 gap-16 items-center text-center"
-          >
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A1</button>
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A2</button>
-            <button class="col-span-2"></button>
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A3</button>
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A4</button>
-          </div>
-          <!-- row-1  -->
-          <p class="col-span-1">A</p>
-          <div
-            class="col-span-11 grid grid-cols-10 gap-16 items-center text-center"
-          >
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A1</button>
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A2</button>
-            <button class="col-span-2"></button>
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A3</button>
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A4</button>
-          </div>
-          <!-- row-1  -->
-          <p class="col-span-1">A</p>
-          <div
-            class="col-span-11 grid grid-cols-10 gap-16 items-center text-center"
-          >
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A1</button>
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A2</button>
-            <button class="col-span-2"></button>
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A3</button>
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A4</button>
-          </div>
-          <!-- row-1  -->
-          <p class="col-span-1">A</p>
-          <div
-            class="col-span-11 grid grid-cols-10 gap-16 items-center text-center"
-          >
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A1</button>
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A2</button>
-            <button class="col-span-2"></button>
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A3</button>
-            <button class="col-span-2 btn btn-md hover:bg-slate-500">A4</button>
-          </div>
-          <!-- row-1  -->
+          <!-- row-9  -->
           <p class="col-span-1">A</p>
           <div
             class="col-span-11 grid grid-cols-10 gap-16 items-center text-center"
@@ -178,7 +184,7 @@
             <h3 class="flex justify-between">
               <p class="flex">
                 <span>Seat</span>
-                <span
+                <span id="total-booked"
                   class="bg-green-400 w-2 h-2 p-2 text-white rounded-full flex items-center justify-center"
                   >0</span
                 >
@@ -189,14 +195,14 @@
           </div>
           <div class="border-dashed my-4 border-b-2"></div>
           <ul class="space-y-5">
-            <h3 class="text-3xl font-semibold text-center text-red-400">
+            <h3 id="selected-seat" class="text-3xl font-semibold text-center text-red-400">
               No Seat Booking
             </h3>
           </ul>
           <div class="border-dashed my-4 border-b-2"></div>
           <div class="flex justify-between">
-            <p>Grand Price</p>
-            <p>BDT.<span>0</span></p>
+            <p>Total Price</p>
+            <p>BDT.<span id="total-price">0</span></p>
           </div>
           <div
             class="flex justify-between bg-white py-4 px-8 ph my-5 shadow-md rounded-lg"
@@ -269,5 +275,7 @@
         </div>
       </div>
     </section>
+
+    <script src="app.js"></script>
   </body>
 </html>
