@@ -5,6 +5,8 @@ const availableSeatTotalEl = document.getElementById("available-seat")
 const totalPriceEl=document.getElementById('total-price')
 const couponInputEl= document.getElementById('coupon-input')
 const couponBtnEl=document.getElementById("coupon-btn")
+const hideSeatEl=document.getElementById("hide-seat")
+const granTotalEl=document.getElementById("grand-total")
 
 let selectedSeat =[]
 let totalPrice =0;
@@ -30,7 +32,11 @@ function handleSelectSeat(event){
     availableSeatTotalEl.innerText=newAvailableSeatValue
     console.log(typeof availableSeatValue)
     
-    selectedSeatEl.classList.add("hidden")
+    // hide selected seat 
+    hideSeatEl.classList.add("hidden")
+
+
+
     selectedSeatEl.innerHTML += `
     <li class="text-base px-3 text-gray-700 flex justify-between font-normal">
       <span>${event.innerText}</span>
@@ -52,10 +58,23 @@ function handleSelectSeat(event){
 // coupon button function
 document.getElementById("coupon-btn").addEventListener("click", function (){
   const couponInputValue = couponBtnEl.value
+  let couponSave= 0;
+  console.log(couponSave)
 
-  if(couponInputValue !== "NEW50" || couponInputValue !== "COUPLE20"){
+  if(couponInputValue !=="new50" && couponInputValue !=="couple20"){
     alert("YOUR provided input is not valid")
+    return
   }
 
-  if
+  if(couponInputValue =="new50"){
+    couponSave =  totalPrice* .15;
+  }
+  else if(couponInputValue =="couple20"){
+    couponSave = totalPrice* .20;
+  }
+  
+  const grandTotalValue = totalPrice - couponSave;
+  granTotalEl.innerText = grandTotalValue.toFixed(2)
+
+
 })
